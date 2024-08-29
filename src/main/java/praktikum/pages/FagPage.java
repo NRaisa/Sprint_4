@@ -23,8 +23,8 @@ public class FagPage {
         new WebDriverWait(driver, Duration.ofSeconds(EnvConfig.EXPLICIT_WAIT));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(By.id("accordion__heading-" + itemId)));
 
-        String tab_status = driver.findElement(By.id("accordion__heading-" + itemId)).getAttribute("aria-disabled");
-        assertEquals("Ответ виден до клика по вопросу", "false", tab_status);
+        String tabStatus = driver.findElement(By.id("accordion__heading-" + itemId)).getAttribute("aria-disabled");
+        assertEquals("Ответ виден до клика по вопросу", "false", tabStatus);
     }
     public void clickOnQuestion(String itemId){
         driver.findElement(By.id("accordion__heading-" + itemId)).click();
