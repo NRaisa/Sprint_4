@@ -11,7 +11,7 @@ public class ScooterTest {
     @Rule
     public DriverRule factory = new DriverRule();
 
-    private String INVALID_ORDER_ID = "123";
+    private String invalidOrderId = "123";
 
     @Test
     public void openMainPage() throws Exception {
@@ -21,7 +21,7 @@ public class ScooterTest {
         mainPain.open();
 
         mainPain.clickOnStatus();
-        mainPain.enterOrderId(INVALID_ORDER_ID);
+        mainPain.enterOrderId(invalidOrderId);
 
         StatusPage statusPage = mainPain.clickOnGo();
         statusPage.checkErrorMessage();

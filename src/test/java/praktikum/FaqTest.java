@@ -32,9 +32,9 @@ public class FaqTest  {
     @Before
     public void closeCookies(){
         WebDriver driver = driverRule.getDriver();
-        var c = new CloseCookiesPage(driver);
-        c.open();
-        c.acceptCookies();
+        var cloCookies = new CloseCookiesPage(driver);
+        cloCookies.open();
+        cloCookies.acceptCookies();
     }
 
     @Parameterized.Parameters

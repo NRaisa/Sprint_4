@@ -40,9 +40,9 @@ public class OrderTest {
     @Before
     public void closeCookies(){
         WebDriver driver = driverRule.getDriver();
-        var c = new CloseCookiesPage(driver);
-        c.open();
-        c.acceptCookies();
+        var cloCookies = new CloseCookiesPage(driver);
+        cloCookies.open();
+        cloCookies.acceptCookies();
     }
 
     @Parameterized.Parameters
@@ -56,11 +56,11 @@ public class OrderTest {
     @Test
     public void clickOnUpperOderButtonAndOderPlaced(){
         WebDriver driver = driverRule.getDriver();
-        var o = new OrderPage(driver);
-        o.clickOnTheUpperOderButton();
-        o.whoIsTheScooterFor(userName, userSurname,userAdress,stationId, userPhone);
-        o.aboutRent(dayId, rentelPeriod, colorId, comment);
-        o.orderPlaced();
+        var ord = new OrderPage(driver);
+        ord.clickOnTheUpperOderButton();
+        ord.whoIsTheScooterFor(userName, userSurname,userAdress,stationId, userPhone);
+        ord.aboutRent(dayId, rentelPeriod, colorId, comment);
+        ord.orderPlaced();
     }
 
     @Test
